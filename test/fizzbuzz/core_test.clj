@@ -2,15 +2,18 @@
   (:require [clojure.test :refer :all]
             [fizzbuzz.core :refer :all]))
 
-;; J'ai une plage où il marche et une plage où il ne marche plus
+;; Conseil pour montrer TDD :
+;; - Partir sur un énoncé
+;; - pattern test list
 
-;; Couleurs pour green bar et red bar
+;; Choix de branche possible :
+;; - j'ai une plage où il marche et une plage où il ne marche plus
+;; - je suis l'énoncé
 
-;; Avoir des casquettes collées ensemble (rouge vert bleu) pour matérialiser
-;; les différentes étapes (TDD hat)
+;; Live coding : avoir des couleurs pour green bar et red bar
 
-;; Partir sur un énoncé
-;; pattern test list
+;; Live coding : avoir des casquettes rouge vert bleu, en changer
+;; pour matérialiser les différentes étapes (toutes collées = TDD hat)
 
 (deftest fizzbuzz
   (testing "fizzbuzz 1 should return 1"
@@ -27,4 +30,8 @@
 
   (testing "fizzbuzz 5 should return buzz"
     (is (= "buzz"
-           (fizz-buzz 5)))))
+           (fizz-buzz 5))))
+
+  (testing "fizzbuzz 6 should return fizz"
+    (is (= "fizz"
+           (fizz-buzz 6)))))
